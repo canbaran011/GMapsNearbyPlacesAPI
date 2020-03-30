@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <title></title>
+</head>
+
+<body style="font-family: 'Roboto', sans-serif;">
+    <nav class="navbar navbar-expand-lg navbar-light mb-2 bg-primary">
+        <a class="navbar-brand font-weight-bold" href="#">Google Nearby Places</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link border" href="https://developers.google.com/places/web-service/search#PlaceSearchRequests">API <span class="sr-only">(current)</span></a>
+                </li>
+              
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <button  class="btn btn-warning my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+ 
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6 mt-6">
+                <div class="card mt-6">
+                    <div class="card-header text-bold">
+                        Places Search
+                    </div>
+                    <div class="card-body">
+                        <form id="new-place">
+                            <div class="form-group">
+                                <label for="title">Latitude</label>
+                                <input type="text" class="form-control" id="lat" placeholder="99.99">    
+                            </div>
+                            <div class="form-group">
+                                <label for="instructor">Longtitude</label>
+                                <input type="text" class="form-control" id="lan" placeholder="99.99">    
+                            </div>
+                            <div class="form-group">
+                                <label for="image">Radius</label>
+                                <input type="text" class="form-control" id="rad" placeholder="999">    
+                            </div>
+                            <button type="submit" id="but" class="btn btn-primary">Search</button>
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-md-6 float-left" id="new-insertion" >
+              
+                <!-- <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div> -->
+
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
