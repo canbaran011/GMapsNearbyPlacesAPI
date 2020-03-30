@@ -20,8 +20,8 @@ class API {
                 var posts = JSON.parse(this.responseText);
                 var html = "";
 
-                console.log(this.responseText);
-                console.log(posts);
+                // console.log(this.responseText);
+                // console.log(posts);
                 
                 posts.results.forEach(post => {
                     html += `
@@ -43,6 +43,7 @@ class API {
         }
         xhr.send();
     }
+   
 }
 
 document.querySelector("#new-place").addEventListener("submit", function (e) {
@@ -50,20 +51,30 @@ document.querySelector("#new-place").addEventListener("submit", function (e) {
     let lat = document.getElementById("lat").value;
     let lan = document.getElementById("lan").value;
     let rad = document.getElementById("rad").value;
-    console.log(lat);
-    console.log(lan);
-    console.log(rad);
+    // console.log(lat);
+    // console.log(lan);
+    // console.log(rad);
   
 
 
     const place = new Places(lat, lan, rad);
-    console.log("***********************");
+    console.log("****C****A******N******");
     // console.log(place.lat);
 
     const api = new API();
     api.placeToList(place);
+    initMap(place);
+ 
 
     e.preventDefault();
 
 
 });
+var map;
+function initMap(place) {
+    
+  map = new google.maps.Map(document.querySelector('#map'), {
+    center: {lat:parseFloat(place.lan) , lng: parseFloat(place.lat)},
+    zoom: 12
+  });
+}
