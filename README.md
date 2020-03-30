@@ -4,4 +4,4 @@ a project for g.maps nearby places search according to entered inputs *lat *lon 
 * this is the project which you can make restApi with using google maps 
 * user should enter input values lat , long , rad which is a point on earth
 * looking for moesif cors problem
-* will add map point on the left side (under input section)  
+* will add map point on the left side (under input section) +added 
