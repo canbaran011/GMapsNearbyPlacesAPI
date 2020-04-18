@@ -22,7 +22,7 @@ class API {
 
                 // console.log(this.responseText);
                 // console.log(posts);
-                
+
                 posts.results.forEach(post => {
                     html += `
                 <div class="card float-left ml-2 mb-2" style="width:45%; height:160px;">
@@ -38,24 +38,22 @@ class API {
                 </div>
                         `;
                 });
-                    document.querySelector('#new-insertion').innerHTML = html;
+                document.querySelector('#new-insertion').innerHTML = html;
             }
         }
         xhr.send();
     }
-   
+
 }
 
 document.querySelector("#new-place").addEventListener("submit", function (e) {
-   
+
     let lat = document.getElementById("lat").value;
     let lan = document.getElementById("lan").value;
     let rad = document.getElementById("rad").value;
     // console.log(lat);
     // console.log(lan);
     // console.log(rad);
-  
-
 
     const place = new Places(lat, lan, rad);
     console.log("****C****A******N******");
@@ -64,30 +62,25 @@ document.querySelector("#new-place").addEventListener("submit", function (e) {
     const api = new API();
     api.placeToList(place);
     initMap(place);
- 
 
     e.preventDefault();
-
-
 });
-
-
 
 function initMap(place) {
     // The location of Uluru
-    var uluru = {lat: parseFloat(place.lan) , lng: parseFloat(place.lat)};
+    var uluru = { lat: parseFloat(place.lan), lng: parseFloat(place.lat) };
     // The map, centered at Uluru
     var map = new google.maps.Map(
-        document.getElementById('map'), {zoom: 12, center: uluru});
+        document.getElementById('map'), { zoom: 12, center: uluru });
     // The marker, positioned at Uluru
-    var marker = new google.maps.Marker({position: uluru, map: map});
-  }
+    var marker = new google.maps.Marker({ position: uluru, map: map });
+}
 
 // without marker
 
 // var map;
 // function initMap(place) {
-   
+
 //   map = new google.maps.Map(document.querySelector('#map'), {
 //     center: {lat:parseFloat(place.lan) , lng: parseFloat(place.lat)},
 //     zoom: 12
