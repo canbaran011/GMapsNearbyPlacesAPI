@@ -6,4 +6,4 @@ a project for g.maps nearby places search according to entered inputs *lat *lon 
 * looking for moesif cors problem + solved with installing chrome extension(for now)
 * will add map point on the left side (under input section) +added.
 * not with xhr make it with fetch //will be added.
-* window.geolocation datas can be taken from user // will be added.
+* window.geolocation datas can be taken from user // will be added.(mentioned in reactjsbrk)
