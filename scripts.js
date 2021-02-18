@@ -9,7 +9,7 @@ class Places {
 class API {
 
     placeToList(place) {
-        var url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + place.lan + "," + place.lat + "&radius=" + place.rad + "&key=AIzaSyA1T08a21qZwlh3lzvMbPKkczLmcrJJ8Mo";
+        var url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + place.lan + "," + place.lat + "&radius=" + place.rad + "&key=YOUR_API_KEY";
         var xhr = new XMLHttpRequest();
 
         xhr.open('GET', url, true);
@@ -21,7 +21,7 @@ class API {
                 var html = "";
 
                 // console.log(this.responseText);
-                // console.log(posts);
+                // console.log(postsAIzaSyA1T08a21qZwlh3lzvMbPKkczLmcrJJ8Mo);
 
                 posts.results.forEach(post => {
                     html += `
